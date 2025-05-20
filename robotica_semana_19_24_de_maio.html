@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividades de Robótica com MakeCode</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      background-color: #0078D7;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    section {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #0078D7;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .desafio {
+      background-color: #e0f7fa;
+      padding: 10px;
+      border-left: 4px solid #0078D7;
+      margin-top: 10px;
+    }
+
+    .item-escola {
+      margin-bottom: 20px; /* Adiciona 20 pixels de espaço abaixo de cada item */
+      text-align: center;  /* Centraliza a imagem e o texto dentro do item */
+    }
+
+    .item-escola img {
+      display: block;      /* Garante que a imagem se comporte como um bloco para centralizar */
+      margin: 0 auto 10px auto; /* Centraliza a imagem e adiciona 10px de espaço abaixo dela */
+      max-width: 100%;     /* Garante que a imagem não ultrapasse o contêiner */
+      height: auto;        /* Mantém a proporção da imagem */
+    }
+
+    .item-escola p {
+      margin-top: 0;       /* Remove o espaço extra do parágrafo, se houver */
+      font-family: Arial, sans-serif; /* Exemplo de fonte */
+      color: #333;         /* Exemplo de cor de texto */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Atividades de Robótica do Buffa semana 19 a 24 de agosto<br><small>(7º Ano - SEDUC-SP)</small></h1>
+  </header>
+
+  <div class="item-escola">
+    <img src="img/escola-sor.jpg" alt="Escola Sebastião de Oliveira Rocha">
+    <p>A escola Sebastião de Oliveira Rocha</p>
+  </div>
+
+  <div class="item-escola">
+    <img src="img/rbv.jpg" width="200" height="200" alt="Professor Buffa">
+    <p>O professor Ricardo Buffa Verçosa - esperando você caprichar na atividade</p>
+  </div>
+
+  <section>
+    <h2>1. Alerta Visual de Trânsito (Substituto do Semáforo com Cores)</h2>
+    <p><strong>Conceitos:</strong> Sequência, tempo, lógica condicional simples</p>
+    <p><strong>Objetivo:</strong> Criar uma simulação de alerta visual que troca entre 3 padrões de LED, representando "Pare", "Atenção" e "Siga".</p>
+    <ul>
+      <li>Exploração: Por que o trânsito usa sinais diferentes?</li>
+      <li>Planejamento: Desenho dos padrões no papel.</li>
+    </ul>
+    <p><strong>Passo a Passo:</strong></p>
+    <ol>
+      <li>Ao iniciar: mostrar ícone de coração.</li>
+      <li>Para sempre:
+        <ul>
+          <li>Mostrar LEDs "X" (Pare), pausar 1000 ms</li>
+          <li>Mostrar LEDs "!" (Atenção), pausar 1000 ms</li>
+          <li>Mostrar LEDs "OK" (Siga), pausar 1000 ms</li>
+        </ul>
+      </li>
+    </ol>
+    <div class="desafio">
+      <strong>Desafio Extra:</strong> Botão A ativa piscar sinal de alerta (!)
+    </div>
+  </section>
+
+  <section>
+    <h2>2. Dado Eletrônico com Rostinhos</h2>
+    <p><strong>Conceitos:</strong> Eventos, variáveis, aleatoriedade, lógica condicional</p>
+    <p><strong>Objetivo:</strong> Criar uma variável humor que sorteia de 1 a 6 e mostra uma carinha conforme o número.</p>
+    <ol>
+      <li>Ao agitar:
+        <ul>
+          <li>Criar variável humor</li>
+          <li>Definir humor como número aleatório de 1 a 6</li>
+        </ul>
+      </li>
+      <li>Mostrar número e rosto correspondente:
+        <ul>
+          <li>Mostrar número (humor)</li>
+          <li>Se humor = 1: carinha triste, 2: dois pontos, ..., 6: carinha feliz</li>
+        </ul>
+      </li>
+    </ol>
+    <div class="desafio">
+      <strong>Desafio Extra:</strong> Adicionar som ao sortear.
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Termômetro com Ícones</h2>
+    <p><strong>Conceitos:</strong> Sensores, variáveis, condicionais, feedback visual</p>
+    <p><strong>Objetivo:</strong> Mostrar temperatura com ícones diferentes.</p>
+    <ol>
+      <li>Ao iniciar: mostrar temperatura com mostrar número</li>
+      <li>Para sempre:
+        <ul>
+          <li>Se temperatura &gt; 30: mostrar bravo</li>
+          <li>Se temperatura &lt; 15: mostrar triste</li>
+          <li>Senão: mostrar feliz</li>
+        </ul>
+      </li>
+    </ol>
+    <div class="desafio">
+      <strong>Desafio Extra:</strong> Botão A: mostra temperatura | Botão B: mostra ícone atual
+    </div>
+  </section>
+
+  <section>
+    <h2>4. Bússola Digital (Direção Norte)</h2>
+    <p><strong>Conceitos:</strong> Sensores, leitura de valores, lógica condicional, orientação</p>
+    <p><strong>Objetivo:</strong> Mostrar direção com ícones.</p>
+    <ol>
+      <li>Ao iniciar: mostrar "Calibrar"</li>
+      <li>Para sempre:
+        <ul>
+          <li>Criar variável graus = bússola (graus)</li>
+          <li>Se graus entre 340-20: mostrar seta para cima ou "N"</li>
+          <li>Se 70-110: mostrar seta para direita ou "L"</li>
+          <li>Se 160-200: mostrar seta para baixo ou "S"</li>
+          <li>Se 250-290: mostrar seta para esquerda ou "O"</li>
+        </ul>
+      </li>
+    </ol>
+    <div class="desafio">
+      <strong>Desafio Extra:</strong> Mostrar letra da direção com "mostrar string N"
+    </div>
+  </section>
+
+</body>
+</html>
